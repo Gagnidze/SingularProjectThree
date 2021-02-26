@@ -206,8 +206,7 @@ bothSections.forEach(element => {
                 favCountriesContainer.appendChild(countryClone);
 
             } else if (e.target.parentElement.parentElement.parentElement === favCountriesContainer) {
-                countryContainer.appendChild(favCountry);
-                // remove country name from favData variable
+                favCountriesContainer.remove(favCountry);
                 favData.splice(favData.indexOf(nameOfCountry), 1);
                 updateLocalStorage();
             }
