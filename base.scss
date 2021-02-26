@@ -1,0 +1,29 @@
+// css which affects whole design
+// Utility classes, variables and others will also be kept here 
+
+$black: rgba(#000, .8);
+$orange: #ff9171;
+$green: #03c03c;
+$red: #d2122e;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+    color: $black;
+    outline: none;
+}
+
+.hidden {
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.redden {
+    color: $red;
+}
+
+.greenen {
+    color: $green;
+}

@@ -1,0 +1,222 @@
+// I keep here css related to bigger components of design, which define overall layout of the page
+// Media queries of responsive design will also go here.s
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    position: sticky;
+    top:0;
+    background-color: rgba( #999, $alpha: 0.15);
+    backdrop-filter: blur(5px);
+    font-size: 20px;
+    border-bottom: 2px solid $orange;
+
+    .header_data_container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    
+        .header_tabs {
+            display: flex;
+    
+            .header_data_tab {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                padding: 0 67px;
+            }
+    
+        }
+            
+    }
+
+    .logo_container {
+        padding: 12px 35px;
+        
+            img {
+            width: 65px;
+            height: 65px;
+        }
+    }
+
+    .header_title {
+        border-bottom: solid 2px $orange;
+        padding: 0 80px;
+    }
+
+    .header_tab_title {
+        font-weight: bold;
+    }
+}
+
+
+.main_body {
+    display: flex;
+    flex-direction: row;
+
+    .all_countries_container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .all_countries {
+        background-color: #e0e0e0;
+    }
+
+    .favourite_countries {
+        box-shadow: -10px 0px 10px rgba($color: #707070, $alpha: 1.0);
+        background-color: #e8e8e8;
+        align-items: center;
+    }
+}
+
+
+@media only screen and (max-width: 1050px) {
+    .header{
+        width: 100%;
+
+        .header_data_container {
+            font-size: 15px;
+
+            .header_tabs {
+                .header_data_tab {
+                    padding: 0 47px;
+                }
+            }
+        }
+    }
+
+    .all_countries, .favourite_countries {
+        .individual_country_container {
+            margin: 12px 30px;
+        }
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .header{
+        width: 100%;
+
+        .header_data_container {
+            font-size: 15px;
+
+            .header_tabs {
+                .header_data_tab {
+                    padding: 0 30px;
+
+                    .header_tab_title {
+                        font-size: 12px;
+                    }
+
+                    .header_tab_content {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+
+        .logo_container {
+            padding: 5px 5px;
+            margin: 0;
+        }
+    }
+
+    .all_countries, .favourite_countries {
+        .individual_country_container {
+
+            margin: 12px;
+            .country_name{
+                font-size: 20px ;
+            }
+
+            .data_container {
+                padding: 10px 15px;
+                
+                .data_tab {
+                    padding: 2px 4px;
+    
+                    .tab_name {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 620px) {
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        position: static;
+        border: none;
+
+        .logo_container{
+            .logo {
+                width: 40px;
+            }
+        }
+
+        .header_data_container{
+            .header_tabs {
+                .header_data_tab{
+                    padding: 5px 10px;
+                }
+            }
+        }
+    }
+
+    .main_body {
+        flex-direction: column-reverse;
+
+        .all_countries, .favourite_countries {
+            .individual_country_container{
+                margin: 10px 50px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .header {
+        .header_title {
+            font-size: 14px;
+            padding: 0;
+        }
+        .header_data_container{
+            .header_tabs {
+                .header_data_tab{
+                    padding: 10px 2px;
+                    
+                }
+            }
+        }
+    }
+
+    .main_body {
+        .all_countries, .favourite_countries {
+
+            .section_heading_container{
+                padding: 0;
+                width: 250px;
+            }
+
+            .individual_country_container{
+                margin: 10px 0;
+                width: 250px;
+            }
+
+            .data_container{
+                .data_tab{
+                    .tab_name {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

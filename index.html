@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" type="image/jpg" href="./images/covid-19.svg" />
+    <title>Covid-19 Statistics</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo_container">
+            <img class="logo" src="./images/covid-19.svg" alt="Covid logo">
+        </div>
+
+        <div class="header_data_container">
+            <div class="header_title">
+                <span>World Covid-19 Statistics</span>
+            </div>
+
+            <div class="header_tabs">
+                <div class="header_data_tab">
+                    <span class="header_tab_title">
+                        Confirmed
+                    </span>
+                    <span class="header_tab_content header_confirmed">
+                        -
+                    </span>
+                </div>
+                <div class="header_data_tab">
+                    <span class="header_tab_title ">
+                        Recovered
+                    </span>
+                    <span class="header_tab_content header_recovered greenen">
+                        -
+                    </span>
+                </div>
+                <div class="header_data_tab">
+                    <span class="header_tab_title">
+                        Critical
+                    </span>
+                    <span class="header_tab_content header_critical redden">
+                        -
+                    </span>
+                </div>
+                <div class="header_data_tab">
+                    <span class="header_tab_title">
+                        Total deaths
+                    </span>
+                    <span class="header_tab_content header_dead">
+                        -
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main_body">
+        <div class="all_countries">
+            <div class="section_heading_container">
+                <span class="section_heading_text">All Countries</span>
+            </div>
+
+            <div class="all_countries_container">
+                <!--  JS COMES HERE !  -->
+            </div>
+
+        </div>
+
+        <div class="favourite_countries">
+            <div class="section_heading_container">
+                <span class="section_heading_text">My Countries</span>
+            </div>
+
+            <div class="favourite_countries_container">
+                <!-- MR JS WILL TAKE CARE ! -->
+            </div>
+
+        </div>
+        <script src="./logic.js"></script>
+</body>
+
+</html>

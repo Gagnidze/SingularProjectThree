@@ -1,0 +1,71 @@
+// css for smaller components and little details
+
+.all_countries, .favourite_countries {
+    display: flex;
+    flex-direction: column;
+
+    .section_heading_container {
+        border-bottom: 3px solid $orange;
+        width: 300px;
+        align-self: center;
+        text-align: center;
+        padding: 20px;
+
+        .section_heading_text {
+            font-size: 20px;
+            font-weight: bolder;
+        }
+    }
+
+    .individual_country_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 2px solid $orange;
+        margin: 22px 50px;
+        box-shadow: 0 0px 5px rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        padding-top: 13px;
+        transition: all .2s;
+        
+        &:hover{
+            transition: all .2s;
+            box-shadow: 0 0px 15px rgb(128, 128, 128);
+        }
+
+        img {
+            height: 15px;
+            cursor: pointer;
+        }
+
+        .country_name {
+            font-size: 25px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .data_container {
+
+            display: flex;
+            padding: 15px 20px;
+
+
+            .data_tab {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                padding: 2px 8px;
+
+                .tab_name {
+                    font-weight: bold;
+                    font-size: 16px;
+                }
+
+                .tab_data {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+}
