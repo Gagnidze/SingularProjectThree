@@ -202,19 +202,10 @@ bothSections.forEach(element => {
                     updateLocalStorage();
                 }
 
-                // This logic prevents favouriting the same country more than once
-
-                const tryingToAdd = favCountry.children[0].children[0].textContent;
-                let countrysAdded = [];
-                Array.from(favCountriesContainer.children).forEach(country => {
-                    countrysAdded.push(country.children[0].innerText);
-                });
-
-                if (!String(countrysAdded).includes(String(tryingToAdd))) {
-                    const countryClone = favCountry.cloneNode(true);
-                    favCountriesContainer.appendChild(countryClone);
-                }
-
+                const countryClone = favCountry.cloneNode(true);
+                // favCountriesContainer.appendChild(countryClone);
+                favCountriesContainer.innerHTML = '';
+                getFavourites();
 
             } else if (e.target.parentElement.parentElement.parentElement === favCountriesContainer) {
                 favCountriesContainer.removeChild(favCountry);
